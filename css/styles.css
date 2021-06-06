@@ -1,0 +1,584 @@
+/* h1 {
+    color: blue;        /*se indica la etiqueta que se quiera modificar */
+
+
+/*}*/
+
+
+/* Hay 3 partes en el selector en este caso h1 que es el selector al cual le vamos a aplicar, las llaves y por ultimo esta la propiedad,color, y el valor , blue. 
+*/
+
+
+/*#site-header {
+    background-color: blue;     /* Para el id se comimienza con un #*/
+
+
+/*}
+
+.encabezado{
+    color: darkred;    /* Para class se comienza con un .*/
+
+
+/*} */
+
+
+/* la diferencia entre class y id es que class esta ehcha para ser reutilizada y id solamente puede haver un id con un nombre por pagina*/
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* Restes para REMS - 62.5% = 10px de 16 px / 1 REM es igual a 16px*/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    /* Esta es la manera que cambbias la fuente*/
+    font-size: 1.6rem;
+}
+
+
+/* GLOBALES*/
+
+img {
+    /* Esto lo que hace es seleccionar todas las estiquetas de imagenes*/
+    max-width: 100%;
+}
+
+.contenedor {
+    width: 95%;
+    /*hace que no choque las orrillas*/
+    max-width: 120rem;
+    /* Para la altura maxima*/
+    margin: 0 auto 0 auto;
+    /* toma 4 valores funciona asi el primer parametro toma como si fuese un reloj ariiba va a ser 0 porque no te interesa a la derecha va a ser auto , son las 3 de la tarde, hacia abajo tampoco importa por eso 0 luego a la derecha auto para que se centren*/
+    /* el tamaño que alla de derecha a izquierda lo va a centrar*/
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+    /* SIEMPRE TRATAR DE DEFINIR UN SISTEMA DE TAMAÑOS*/
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+
+/*Utilidades*/
+
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.centrar-texto {
+    text-align: center;
+}
+
+.d-block {
+    display: block !important;
+    /* Aplico important ya que fuerso a la amquina a que lo haga a pezar de que no quiera hacerlo*/
+}
+
+.contenido-centrado {
+    max-width: 800px;
+}
+
+
+/*  BOTONES*/
+
+.boton {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    margin-top: 3rem;
+    display: inline-block;
+    /*Para poder acomodar los botones*/
+    text-align: center;
+    border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        /* para que tome bien los mamrgin y los paddins*/
+        flex: 0 0 auto;
+    }
+}
+
+.boton:hover {
+    cursor: pointer;
+}
+
+.boton-amarillo {
+    background-color: #E08709;
+}
+
+.boton-verde {
+    background-color: #71B100;
+}
+
+
+/* HEADER*/
+
+.site-header {
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+
+.site-header.inicio {
+    /* Si quiero agregar dos clases al mismo tiempo despues de la primera va un .*/
+    background-image: url(../img/header.jpg);
+    background-position: center center;
+    /* background-position:center center es para posicionar la iagen y en este caso colocamos center center para centrar*/
+    background-size: cover;
+    /* Esto va a forzar a que tome todo el espacio disponible tanto en altura como en ancho.*/
+    height: 100vh;
+    /* 100vh significa que el tamaño de la imagen se acomoda al tamaño de la pantalla*/
+    /*Para que se vea mas grande la imagen le aumento el tamaño*/
+    min-height: 60rem;
+    /* El min-height es un minimo en el que se va a ver la imagen*/
+}
+
+.contenido-header {
+    height: 100%;
+    /* Para que tome todo el contenido*/
+    display: flex;
+    flex-direction: column;
+    /* Esto es para darle una direccion va a ir*/
+    justify-content: space-between;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenido-header {
+        text-align: left;
+    }
+}
+
+.contenido-header h1 {
+    color: white;
+    padding-bottom: 2rem;
+    /* Padding es espacio hacia dentro del el elemento y margin es hacia otro elemento*/
+    max-width: 60rem;
+    line-height: 1.8;
+}
+
+.barra {
+    padding-top: 3rem;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        /* Para activare flexbox se pone esto*/
+        /*El flex lo que hace por asi deecir lo es separarlos y ponerlo a cada uno de un lado*/
+        justify-content: space-between;
+        /* Esto te permite alinear uno de un lado y uno del otro*/
+        align-items: center;
+        padding-top: 3rem;
+    }
+}
+
+
+/* NAVEGACION*/
+
+.navegacion a {
+    /* Pongo a porque selecciono una clase y luego selecciono los "hijos" de esa clase como en este caso es a*/
+    color: white;
+    text-decoration: none;
+    font-size: 2.2rem;
+    display: block;
+    /* esto va ser que cada uno de los enlaces tome una linea*/
+}
+
+@media (min-width:768px) {
+    .navegacion a {
+        display: inline-block;
+        font-size: 1.8rem;
+        /* 1.8 REM = 18px*/
+        margin-right: 2rem;
+    }
+    .navegacion a:last-of-type {
+        margin: 0;
+    }
+}
+
+.navegacion a:hover {
+    /*Pseudos conectores*/
+    /* El hover sirve para que cuando te posisciones sobre la palabra cambie e color*/
+    color: #71B100;
+}
+
+
+/*Mobli Menu*/
+
+.mobile-menu img {
+    width: 5rem;
+}
+
+@media (min-width: 768px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+.navegacion:target {
+    display: block;
+}
+
+.navegacion {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .navegacion {
+        display: block;
+    }
+}
+
+
+/* Iconos Nostros*/
+
+@media (min-width:768px) {
+    .iconos-nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.icono {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .icono {
+        flex-basis: calc(33.3% - 1rem);
+        /*agarra el 100% y lo divide entre 3 que son las clases*/
+    }
+}
+
+.icono h3 {
+    text-transform: uppercase;
+}
+
+
+/* Anuncios*/
+
+@media (min-width: 768px) {
+    .contenedor-anuncios {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* El wrap lo que hace es distribuir en este caso 3 arriba y 3 abajo  el default es nowrap*/
+    }
+}
+
+.anuncio {
+    /*  flex-basis: ;*/
+    /* 2) border-style: solid;*/
+    border: 1px solid #b5b5b5;
+    /* = */
+    /*3) border-color: #b5b5b5;*/
+    /* Los border son para agregar los bordes como esta en los anuncios*/
+    background-color: #f5f5f5;
+    /*1) border-width: 1px;*/
+    margin-bottom: 2rem;
+}
+
+@media (min-width:768px) {
+    .anuncio {
+        flex: 0 0 calc(33.3% - 1rem);
+        /* EL FLEX JUTNA EL  FLEX GROW, FLEX-SHRINK , FLEX-BASIS*/
+        /*flex-shrink:*/
+        /* Con esta propiedad lo que dice es que se encoja lo mas posible y el default es 1 y para que no pase esto pongo 0*/
+    }
+}
+
+.contenido-anuncio {
+    padding: 2rem;
+}
+
+.contenido-anuncio h3,
+.contenido-anuncio p {
+    margin: 0;
+}
+
+.precio {
+    color: #71B100;
+    font-weight: 700;
+}
+
+.iconos-caracteristicas {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    max-width: 500px;
+}
+
+.iconos-caracteristicas li {
+    /* flex: 1;*/
+    display: flex;
+}
+
+.iconos-caracteristicas li img {
+    margin-right: 2rem;
+}
+
+.ver-todas {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/*CONTACTO HOME*/
+
+.imagen-contacto {
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    align-items: center;
+}
+
+.contenido-contacto {
+    flex: 0 0 95%;
+    /* detecta cuanto tamaño hay disponible y lo divide y asigna pix a cada elemto*/
+    color: white;
+}
+
+.contenido-contacto p {
+    font-size: 1.8rem;
+}
+
+
+/*SECCION INFERIOR*/
+
+@media (min-width: 768px) {
+    .seccion-inferiror {
+        display: flex;
+        justify-content: space-between;
+    }
+    .seccion-inferiror .blog {
+        flex-basis: 60%;
+    }
+    .seccion-inferiror .testimoniales {
+        flex-basis: calc(40% - 2rem);
+    }
+}
+
+.entrada-blog {
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .entrada-blog {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.entrada-blog:last-of-type {
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .entrada-blog .imagen {
+        flex-basis: 40%;
+    }
+    .entrada-blog .texto-entrada {
+        flex-basis: calc(60% - 3rem);
+    }
+}
+
+.texto-entrada a {
+    color: black;
+    text-decoration: none;
+}
+
+.texto-entrada h4 {
+    margin: 0%;
+    line-height: 1.4;
+}
+
+.texto-entrada h4::after {
+    /* Esto quiere decir creame un pseudo element despues del por ej:h4*/
+    content: '';
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background-color: #71B100;
+    margin-top: 1rem;
+}
+
+.texto-entrada span {
+    color: #E08709;
+}
+
+
+/*TESTIMONIALES*/
+
+.testimonial {
+    background-color: #71B100;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: white;
+    border-radius: 2rem;
+    /* esta etiqueta lo que hace es redonderal*/
+}
+
+.testimonial p {
+    text-align: right;
+}
+
+.testimonial blockquote::before {
+    content: '';
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    left: -2rem;
+}
+
+.testimonial blockquote {
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+
+
+/*FOOTER*/
+
+.site-footer {
+    background-color: #333333;
+    margin: 0;
+}
+
+.contenedor-footer {
+    padding: 3rem 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .contenedor-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.copyright {
+    margin: 0;
+    color: #ffffff;
+}
+
+
+/*PAGINAS INTERNAS*/
+
+
+/*Nosotros*/
+
+@media (min-width: 768px) {
+    .contenido-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /*50% 50%;*/
+        /*50 % para la imagen y 50% para el texto los divide en columnas*/
+        grid-column-gap: 2rem;
+    }
+}
+
+.texto-nosotros blockquote {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
+}
+
+
+/*Anuncio*/
+
+.resumen-propiedad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*CONTACTO*/
+
+form p {
+    font-size: 1.5rem;
+    color: #4f4f4f;
+    margin: 2rem 0 0 0;
+}
+
+legend {
+    font-size: 2rem;
+    color: #333333;
+}
+
+label {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+
+input:not([type="submit"]),
+textarea,
+select {
+    /* Se coloca corchete para espesificar cual modificar en estos casos*/
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+input[type="radio"] {
+    width: auto;
+    /*Quiere decir toma el espacio que reueires no tomes mas*/
+    margin: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+textarea {
+    height: 20rem;
+}
+
+.forma-contacto {
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

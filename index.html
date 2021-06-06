@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Es lo que se comunica es la parte interna  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienes Raices</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Siempre colocar la hoja de estilos al final-->
+
+
+
+</head>
+
+<body>
+    <!--Lo que esta en el body es lo que es visible-->
+
+    <header class="site-header inicio">
+        <!--El header indica el encabezado principal de la web-->
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/">
+                    <img src="img/logo.svg" alt="Logotipo de Bienes Raices">
+                    <!--Con esta etiqueta se clocan las imagenes-->
+                </a>
+                <div class="mobile-menu">
+                    <a href="#navegacion"></a>
+                    <!--El # mas el nombre sirev para enlasar-->
+                    <img src="img/barras.svg" alt="Icono Menu">
+                </div>
+
+                <nav id="navegacion" class="navegacion">
+                    <!--Como esta es la parte de navegacion se coloca el nav-->
+                    <a href="Nosotros.html">Nosotros</a>
+                    <!--Esta es la forma de crear un enlase-->
+                    <!-- <a target="_blank" href="http://netflix.com">Ir a Netflix</a>Esta es la forma para si quiero enlasar con otra pagina web. Ademas de que si se agrega traget= _ blank se abre como otra pestaña -->
+                    <a href="Anuncios.html">Anuncios</a>
+                    <a href="Blog.html">Blog</a>
+                    <a href="Contacto.html">Contacto</a>
+                </nav>
+            </div>
+            <!--Esta es la barra-->
+
+            <h1> Venta de Casas y Departamentos Exclusivos de Lujo</h1>
+
+        </div>
+        <!--Este es el contenedor-->
+        <!--Para hacer un salto de linea se puede usar  br-->
+        <!-- <p>Hola mi nombre es Tomas Leon Patlayan, </p>
+        
+     <p> bienvenidos a mi blog  </p>-->
+    </header>
+
+    <section class="contenedor seccion">
+        <!-- Como es contenido agrupado y contenido que esta relacionado y se complementa se separa con section-->
+        <!-- Las condiciones para usar el seccio son: el primer hijo sea un encabezado, tiene que ser algo diferente un cambio de seccion a lo que estaba-->
+        <h2 class="fw-300  centrar-texto">Mas Sobre Nostros</h2>
+
+
+        <div class="iconos-nosotros">
+            <div class="icono">
+                <!--Si no cabe en un header un section y se queire agrupar lo mejor es utilizar el div-->
+                <img src="img/icono1.svg" alt="Icono Seguridad">
+                <h3>Seguridad</h3>
+                <p> Maiores, accusantium! Quas minus tempore animi laudantium optio dolores blanditiis atque! Ipsum, cumque quaerat. Rerum dolorem mollitia sapiente iure ab. Rem, suscipit?</p>
+            </div>
+            <div class="icono">
+                <img src="img/icono2.svg" alt="Icono Mejor Precio">
+                <h3> El mejor Precio</h3>
+                <p> dolor sit amet consectetur adipisicing elit. Harum, quaerat vitae nesciunt impedit debitis maiores deserunt aspernatur autem deleniti dolor, laborum labore. Ad, vel amet ex error reiciendis dolorem officia?</p>
+            </div>
+            <div class="icono">
+                <img src="img/icono3.svg" alt="Icono A Tiempo">
+                <h3>A Tiempo</h3>
+                <p> dolor sit amet consectetur adipisicing elit. Nihil laboriosam odio corporis dolore perspiciatis eius recusandae est. Vero corrupti odit distinctio voluptatem, illum iusto neque architecto aspernatur omnis nesciunt aperiam.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <main class="seccion contenedor">
+        <!-- Indica el contenido pricipal de la web-->
+
+        <h2 class="fw-300 centrar-texto"> Casas y Depas en Venta</h2>
+
+        <div class="contenedor-anuncios">
+            <div class="anuncio">
+                <img src="img/anuncio1.jpg" alt="Anuncio Casa en el Lago">
+                <div class="contenido-anuncio">
+                    <h3>Casa de Lujo en el Lago</h3>
+                    <p>Casa en el lago con exelente vista, acabados de lujo a un excelente precio</p>
+                    <p class="precio">$3,000,000</p>
+
+
+                    <ul class="iconos-caracteristicas">
+                        <!--Con ul creas un listado-->
+
+                        <li>
+                            <img src="img/icono_wc.svg" alt="icono wc">
+                            <p>3</p>
+                        </li>
+                        <!--Despues cada elemto del listado se coloca en un li-->
+                        <li>
+                            <img src="img/icono_estacionamiento.svg" alt="icono autos">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img src="img/icono_dormitorio.svg" alt="icono habitaciones">
+                            <p>4</p>
+                        </li>
+                    </ul>
+
+
+
+
+                    <a href="anuncio.html" class="boton boton-amarillo d-block">Ver Propiedad</a>
+                    <!--El signo # significa que todavia no tengo el enlace pero voy a agregarlo-->
+                </div>
+            </div>
+
+            <div class="anuncio">
+                <img src="img/anuncio2.jpg" alt="Anuncio Casa Terminados de Lujo ">
+                <div class="contenido-anuncio">
+                    <h3>Casa terminados de lujo</h3>
+                    <p>Casa con diseño moderno, asi cmo tecnologia inteligente y amueblada</p>
+                    <p class="precio">$2,000,000</p>
+
+
+
+                    <ul class="iconos-caracteristicas">
+                        <!--Con ul creas un listado-->
+
+                        <li>
+                            <img src="img/icono_wc.svg" alt="icono wc">
+                            <p>3</p>
+                        </li>
+                        <!--Despues cada elemto del listado se coloca en un li-->
+                        <li>
+                            <img src="img/icono_estacionamiento.svg" alt="icono autos">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img src="img/icono_dormitorio.svg" alt="icono habitaciones">
+                            <p>4</p>
+                        </li>
+                    </ul>
+
+
+
+                    <a href="anuncio.html" class="boton boton-amarillo d-block">Ver Propiedad</a>
+                </div>
+            </div>
+
+            <div class="anuncio">
+                <img src="img/anuncio3.jpg" alt="Anuncio Casa con Alberca">
+                <div class="contenido-anuncio">
+                    <h3>Casa con Pileta</h3>
+                    <p>Casa con Pielta y acabados de lujo en la ciudad, excelente oportunidad </p>
+                    <p class="precio">$3,000,000</p>
+
+
+
+                    <ul class="iconos-caracteristicas">
+                        <!--Con ul creas un listado-->
+
+                        <li>
+                            <img src="img/icono_wc.svg" alt="icono wc">
+                            <p>3</p>
+                        </li>
+                        <!--Despues cada elemto del listado se coloca en un li-->
+                        <li>
+                            <img src="img/icono_estacionamiento.svg" alt="icono autos">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img src="img/icono_dormitorio.svg" alt="icono habitaciones">
+                            <p>4</p>
+                        </li>
+                    </ul>
+
+
+
+
+                    <a href="anuncio.html" class="boton boton-amarillo d-block">Ver Propiedad</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="ver-todas">
+            <a href="Anuncios.html" class="boton boton-verde">Ver Todas</a>
+        </div>
+
+    </main>
+
+    <section class="imagen-contacto">
+        <div class="contenedor contenido-contacto">
+            <h2>Encuentra la Casa de tus Sueños</h2>
+            <p>Llena el formulario de contacto y un asesor se pondra en contacto contigo a la brevedad</p>
+            <a href="Contacto.html" class="boton boton-amarillo">Contactanos</a>
+        </div>
+    </section>
+
+
+
+    <div class="seccion-inferiror contenedor">
+        <section class="blog">
+            <h3 class="centrar-texto fw-300">Nuestro Blog</h3>
+
+            <article class="entrada-blog contenedor seccion">
+                <!--Se coloca para cuando se tiene un blog o escribiendo un art.-->
+                <div class="imagen">
+                    <img src="img/blog1.jpg" alt="Entrada de blog">
+                </div>
+                <div class="texto-entrada">
+                    <a href="entrada.html">
+                        <h4>Terraza en el techo de tu casa</h4>
+                    </a>
+                    <p>Escrito el: <span> 20/10/2020</span> por: <span>  Admin</span></p>
+                    <p>Consejos para construir una terraza en el techo de tu casa, con los mejores materiales y ahoprrando dinero</p>
+                </div>
+            </article>
+
+            <article class="entrada-blog">
+                <div class="imagen">
+                    <img src="img/blog2.jpg" alt="Entrada de blog">
+                </div>
+                <div class="texto-entrada">
+                    <a href="entrada.html">
+                        <h4>Guia para la Decoracion de tu Hogar</h4>
+                    </a>
+                    <p>Escrito el: <span> 20/10/2020</span> por: <span>  Admin</span></p>
+                    <p>Maximiza el espacio en tu hogar con esta guia, aprende a combinar muebles y colores para darle vida a tu espacio</p>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="testimoniales">
+            <h3 class="centrar-texto fw-300">Testimoniales</h3>
+            <!-- Los testimoniales o cuando vez que tiene comillas se los conocen como blockquote -->
+            <div class="testimonial">
+                <blockquote>
+
+                    El personal se comporto de una excelente forma, muy buena atencion y la casa que em ofrecieron cumplen con todas mis expectativas.
+                </blockquote>
+                <p>- Tomas Leon Patlayan</p>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="site-footer seccion">
+        <!--Mismo que el header pero se coloca al final-->
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="Nosotros.html">Nosotros</a>
+                <a href="Anuncios.html">Anuncios</a>
+                <a href="Blog.html">Blog</a>
+                <a href="Contacto.html">Contacto</a>
+            </nav>
+
+            <p class="copyright">Todos los Drechos Recervados 2020 &copy;</p>
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>

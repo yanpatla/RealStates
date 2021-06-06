@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Es lo que se comunica es la parte interna  -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienes Raices</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Siempre colocar la hoja de estilos al final-->
+
+
+
+</head>
+
+<body>
+    <!--Lo que esta en el body es lo que es visible-->
+
+    <header class="site-header">
+        <!--El header indica el encabezado principal de la web-->
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="/">
+                    <img src="img/logo.svg" alt="Logotipo de Bienes Raices">
+                    <!--Con esta etiqueta se clocan las imagenes-->
+                </a>
+                <div class="mobile-menu">
+                    <a href="#navegacion"></a>
+                    <!--El # mas el nombre sirev para enlasar-->
+                    <img src="img/barras.svg" alt="Icono Menu">
+                </div>
+
+                <nav id="navegacion" class="navegacion">
+                    <!--Como esta es la parte de navegacion se coloca el nav-->
+                    <a href="Nosotros.html">Nosotros</a>
+                    <!--Esta es la forma de crear un enlase-->
+                    <!-- <a target="_blank" href="http://netflix.com">Ir a Netflix</a>Esta es la forma para si quiero enlasar con otra pagina web. Ademas de que si se agrega traget= _ blank se abre como otra pestaña -->
+                    <a href="Anuncios.html">Anuncios</a>
+                    <a href="Blog.html">Blog</a>
+                    <a href="Contacto.html">Contacto</a>
+                </nav>
+            </div>
+            <!--Esta es la barra-->
+
+
+
+        </div>
+        <!--Este es el contenedor-->
+        <!--Para hacer un salto de linea se puede usar  br-->
+        <!-- <p>Hola mi nombre es Tomas Leon Patlayan, </p>
+        
+     <p> bienvenidos a mi blog  </p>-->
+    </header>
+
+    <h1 class="fw-300 centrar-texto">Contacto</h1>
+    <img src="img/destacada3.jpg" alt="Imagen Principal">
+
+    <main class="contenedor seccion contenido-centrado">
+        <!--se agrega la class contenido sentrado para que el formulario no quede muy grande y no sea tan feo-->
+        <h2 class="fw300 centrar-texto">Llenar el Formulario de Contacto</h2>
+        <form action="">
+            <!--Con la etiqueta form es con la que se empieza para hacer el formulario-->
+            <fieldset>
+                <!--Esto hace agrupar/encuadrar capos que esten relacionados-->
+                <legend>Informacion Personal</legend>
+                <!--Para informarle al usario o como se llama este grupo se coloca legend-->
+                <label for="nombre">Nombre:</label>
+                <!--El input siempre viene acompañado de un label-->
+                <input type="text" id="nombre" placeholder="Tu Nombre">
+                <!--El for quiere decir a que elemento pertenece y para identificar a cual pertenece se coloca por ejemplo en el input un id-->
+                <!--Placeholder hace que aparesca una sombra en donde se tiene que escribir-->
+                <label for="E-mail">E-mail:</label>
+                <input type="email" id="E-mail" placeholder="Tu Correo electronico" required>
+
+                <label for="telefono">Telefono</label>
+                <input type="tel" id="telefono" placeholder="Tu Telefono" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje"></textarea>
+                <!--Este sirve para cuando el usuario quiere agregar una opinion o texto-->
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Informacion Sobre Propiedad</legend>
+                <label for="opciones">Vende o Compra</label>
+                <select id="opciones">
+                    <option value="">Compra</option>
+                     <option value="">Vende</option>
+                </select>
+                <label for="cantidad">Cantidad</label>
+                <input type="number" min="0" max="100" step="5">
+            </fieldset>
+
+            <fieldset>
+                <legend>Contacto</legend>
+
+
+                <p>Como desea ser Contactado:</p>
+
+                <div class="forma-contacto">
+                    <label for="telefono">Telefono</label>
+                    <input type="radio" name="contacto" value="telefono" id="telefono">
+                    <!--Para poder agruparlos y que el radio sepa que es lo mismo se le coloca en name-->
+                    <label for="correo">E-mail</label>
+                    <!--El value es para saber despues en PhP que seleccionaron-->
+                    <input type="radio" name="contacto" value="correo" id="correo">
+                </div>
+
+                <p>Si eligio Telefono, elija la fecha y hora</p>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha">
+
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" min="09:00" max="18:00">
+
+            </fieldset>
+
+
+            <input type="submit" value="Enviar" class="boton boton-verde">
+
+        </form>
+
+
+
+
+    </main>
+
+    <footer class="site-footer seccion">
+        <!--Mismo que el header pero se coloca al final-->
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="Nosotros.html">Nosotros</a>
+                <a href="Anuncios.html">Anuncios</a>
+                <a href="Blog.html">Blog</a>
+                <a href="Contacto.html">Contacto</a>
+            </nav>
+
+            <p class="copyright">Todos los Drechos Recervados 2020 &copy;</p>
+        </div>
+
+    </footer>
+
+
+
+</body>
+
+</html>
